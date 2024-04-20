@@ -4,12 +4,12 @@
 
 1. Buka terminal.
 2. Update paket sistem:
-   ```
+   ```bash
    sudo apt update
    sudo apt upgrade
    ```
 3. Install BIND9:
-   ```
+   ```bash
    sudo apt install bind9 bind9-dnsutils bind9-doc
    ```
 
