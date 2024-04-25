@@ -357,7 +357,7 @@ Akan terlihat hasilnyaseperti dibawah, dengan status Server (LISTEN) : MariaDB(M
 Melakukan Cek terhadap Layanan Posﬁx
 
 ```bash
-telnet mail.kelompok11.local 25
+telnet mail.kelompok6.local 25
 ```
 
 ![mail cek](assets/telnet.png)

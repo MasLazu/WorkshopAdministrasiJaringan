@@ -41,7 +41,7 @@
 
    ```bash
     forwarders {
-            202.9.85.3;
+            10.10.10.1;
             202.9.85.4;
     };
 
@@ -50,7 +50,7 @@
 
     listen-on-v6 { none; };
 
-    listen-on { 127.0.0.1; 10.0.2.15; };
+    listen-on { 127.0.0.1; 192.168.6.10; };
 
     allow-transfer { none; };
 
@@ -97,7 +97,7 @@
    @       IN      NS      ns.kelompok6.local.
    @       IN      MX      10 ns.kelompok6.local.
 
-   ns      IN      A       10.0.2.15
+   ns      IN      A       192.168.6.10
 
    www     IN      CNAME   ns
    mail    IN      CNAME   ns
@@ -120,7 +120,7 @@
    ;
    @       IN      NS      ns.kelompok6.local.
 
-   15      IN      PTR     ns.kelompok6.local.
+   10      IN      PTR     ns.kelompok6.local.
    ```
 
 6. Edit file `/etc/resolv.conf` :
@@ -131,7 +131,7 @@
 
    ```bash
    search kelompok6.local
-   nameserver 10.0.2.15
+   nameserver 192.168.6.10
    ```
 
 ### Langkah 4: Periksa Konfigurasi dan Restart BIND9
@@ -141,7 +141,7 @@
    ```bash
    sudo named-checkconf /etc/bind/named.conf
    sudo named-checkzone kelompok6.local /var/lib/bind/db.kelompok6.local
-   sudo named-checkzone 0.0.10.inaddr-arpa /var/lib/bind/db.kelompok6.local.inv
+   sudo named-checkzone 6.168.192.inaddr-arpa /var/lib/bind/db.kelompok6.local.inv
    ```
 
    ![Check](assets/ss-check.png)
@@ -164,7 +164,7 @@
 
    ```bash
    dig kelompok6.local
-   dig
+   dig -x 192.168.6.10
    ```
 
    ![Status](assets/ss-dig.png)
