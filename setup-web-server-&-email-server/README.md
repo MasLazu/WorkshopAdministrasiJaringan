@@ -361,3 +361,11 @@ telnet mail.kelompok6.local 25
 ```
 
 ![mail cek](assets/telnet.png)
+
+Mengirim email ke kelompok lain
+
+![mail kirim](assets/kirim-email.jpg)
+
+Menerima email ke kelompok lain
+
+![mail kirim](assets/terima-email.jpg)
